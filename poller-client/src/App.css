@@ -1,0 +1,67 @@
+.App {
+  text-align: center;
+  color: white;
+  max-width: 700px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+.Text-input {
+  border-radius: 8px;
+  border: 0px;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  margin-left: 10px;
+}
+
+.Submit-input {
+  border-radius: 16px;
+  border: 0px;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  color: white;
+  background-color: #00111d;
+  margin-left: 10px;
+}
+
+.Service-list {
+  margin-top: 60px;
+}
+
+.Service-item {
+  list-style-type: none;
+  margin-left: 20px;
+  margin-right: 20px;
+  border: solid 1px #00111d;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.Service-item-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+}
+
+.Bin {
+  background-color: #00111d;
+  padding: 4px;
+  margin-left: 10px;
+}
+
+p {
+  font-size: 15px;
+  margin: 0;
+  text-align: left;
+}
