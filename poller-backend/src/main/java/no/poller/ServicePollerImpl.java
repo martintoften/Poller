@@ -24,9 +24,9 @@ public class ServicePollerImpl implements ServicePoller {
     @Override
     public void startPolling() {
         serviceDAO.getAll()
+            .map(serviceMapper::toService)
             .onSuccess(serviceResult -> {
-                final List<Service> services = serviceMapper.toService(serviceResult);
-                services.forEach(service -> client.getAbs(service.getUrl()).send(requestResult -> {
+                serviceResult.forEach(service -> client.getAbs(service.getUrl()).send(requestResult -> {
                     if (requestResult.result().statusCode() == 200) {
                         serviceDAO.updateState(service.getName(), ServiceState.OK);
                     } else {
