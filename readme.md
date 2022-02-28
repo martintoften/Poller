@@ -2,4 +2,14 @@ To run poller-backend run `./gradlew run`. You can also run the pre built fat ja
 
 To run poller-client run `npm install && npm start`
 
-Was unable to make this work with Docker.  
+Was unable to make this work with Docker so you would need to set up the database manually:
+
+
+```
+MySQLConnectOptions()
+  .setPort(3306)
+  .setHost("127.0.0.1")
+  .setDatabase("poller")
+  .setUser("dev")
+  .setPassword("secret");
+```
